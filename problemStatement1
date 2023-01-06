@@ -1,0 +1,32 @@
+/*Q1:A doctor is giving advice to patient about how to 
+maintain our body which type of food we should take.
+For that doctor asks for the number of calories and fat grams 
+in a food. Then it display the percentage of calories that come
+from fat. If the calories from fat are less then 30% of the
+total calories of the food, it should also display a message
+indicating that the food is low in fat.
+Note: consider one gram of fat has 9 calories.*/
+let cal:number=1000;
+let fat:number=90;
+let fatCal:number=fat*9;
+let per:number;
+if(fatCal>cal)
+{
+    console.log("number of calories in the food=",cal+"Calories");
+    console.log("number of fat grams in the food=",fat+"grams");
+    console.log("Calories from fat cannot be greater");
+}
+else{
+        per=(fatCal/cal)*100;
+        console.log("number of calories in the food=",cal+"Calories");
+        console.log("number of fat grams in the food=",fat+"grams");
+        console.log("The percentage of calories from fat is: ",per+"%");
+    if(per<30)
+    {
+    console.log("This food is low in fat");
+    }
+    else
+    {
+    console.log("This food is high in fat"); 
+    }
+}
