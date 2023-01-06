@@ -1,0 +1,18 @@
+let weight:number=80; //Weight in pound
+let height:number=66.7; //height in inches
+let personWeightKg:number=weight*0.45359237;//weight in kg
+let personHeightMeter:number=height*0.0254;//height in m
+
+let bmi:number= personWeightKg/(personHeightMeter*personHeightMeter); 
+if(bmi<18.5)
+{
+    console.log("YOU ARE UNDERWEIGHT");
+}
+if(bmi>25)
+{
+    console.log("YOU ARE OVERWEIGHT");
+}
+if(bmi>=18.5 && bmi<=25)
+{
+  console.log("YOU ARE OPTIMAL");  
+}
