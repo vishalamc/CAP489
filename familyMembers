@@ -1,0 +1,25 @@
+  let kids10to15 = 90;
+  let kids15to20 = 95;
+  let restPeople=100
+
+  function familyMembers(numberOfMembers:number,...age:number[]){
+    let total=0;
+    for (let i = 0; i < numberOfMembers; i++) {
+      if(age[i] < 10){
+        total=total+restPeople;
+        console.log("Submitted age is",age[i],"," ,"Status: You are not allowed in pool");
+      }else if(age[i] > 10 && age[i]<=15){
+        console.log("Submitted age is",age[i],"," ,"Status: You get 10% discount");
+        total=total+kids10to15;
+      }else if(age[i] > 15 && age[i]<=20){
+        console.log("Submitted age is",age[i],"," ,"Status: You get 5% discount");
+        total=total+kids15to20;
+      }else{
+        console.log("Submitted age is",age[i],"," ,"Status: Not eligible for pool");
+        total=total+restPeople;
+      }
+    }
+    console.log("Total amount you have to pay is: ", total);
+  }
+
+   familyMembers(5,4,15,17,13,2);
