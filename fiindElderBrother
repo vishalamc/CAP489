@@ -1,0 +1,16 @@
+class EldestBrother{
+
+    findEldestBrother(...brother: number[]){
+        if (brother[0]>brother[1] && brother[0]>brother[2]){
+            console.log("Brother 1 is the eldest!");
+        }
+        else if (brother[1]>brother[0] && brother[1]>brother[2]){
+            console.log("Brother 2 is the eldest!");
+        }
+        else if (brother[2]>brother[0] && brother[2]>brother[1]){
+            console.log("Brother 3 is the eldest!");
+        }
+    }
+}
+
+let obj1 = new EldestBrother()
