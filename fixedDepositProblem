@@ -1,0 +1,27 @@
+class FixedDeposit
+{
+    bankName:string;
+    amount:number;
+    constructor(bname:string,amt:number)
+    {
+        this.bankName=bname;
+        this.amount=amt;
+    }
+    getDetails():void
+    {
+        if(this.bankName=="SBI")
+        {
+           let totalAmount:number=this.amount+(this.amount*5/100);
+           console.log("After Deposit in SBI: ",totalAmount);
+        }
+        if(this.bankName=="PNB")
+        {
+           let totalAmount:number=this.amount+(this.amount*4/100);
+           console.log("After Deposit in PNB: ",totalAmount);
+        }
+    }
+}
+let fdObj1=new FixedDeposit("SBI",10000);
+let fdObj2=new FixedDeposit("PNB",10000);
+fdObj1.getDetails();
+fdObj2.getDetails();
