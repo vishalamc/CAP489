@@ -1,0 +1,19 @@
+class base{
+    protected num1:number;
+    constructor(){
+        this.num1=10;
+    }
+}
+class derive extends base{
+    num2:number;
+    constructor()
+    {
+        super();
+        this.num2=20;
+    }
+    add():void{
+        console.log(this.num1+this.num2);
+    }
+}
+let deriveObj=new derive();
+deriveObj.add();
