@@ -1,0 +1,75 @@
+<html>
+    <head>
+          <title>My Angular App</title>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+       <style>
+           body{
+               background-color:orange;
+               border-color:black;
+               
+           }
+       </style>
+
+       
+    <script>
+      
+        var app=angular.module("calc",[])
+        app.controller("calcu",function($scope){
+         
+          
+          $scope.btnsubmit=function(){
+            $scope.result=0;
+            var a=$scope.txtnum1;
+            var b=$scope.txtnum2;
+            switch($scope.Operation){
+              case "+":
+                $scope.result=a+b;
+                break;
+              case "-":
+                $scope.result=a-b;
+                break;
+              case "/":
+                $scope.result=a/b;
+                break;
+              case "*":
+                $scope.result=a*b;
+                break;
+              default:
+                $scope.result="Invalid"
+
+            }
+            
+          }
+        })
+
+    </script>
+    
+     
+    </head>
+    <body ng-app="calc" ng-controller="calcu">
+      <form>
+      <div>
+        <div>
+          <p><h2>Calculation</h2></p>
+          <hr>
+          <input type="number"  ng-model="txtnum1" required>
+          <hr>
+          <input type="number"  ng-model="txtnum2" required>
+          <hr>
+          <label for="Arithmetic">Choose the Operation</label>
+
+          <select ng-model="Operation">
+            <option value="+">Add</option>
+            <option value="-">Sunbtract</option>
+            <option value="/">Division</option>
+            <option value="*">Multiplicaton</option>
+          </select> 
+          <hr>
+          <button ng-click="btnsubmit()">SUBMIT</button>
+          <hr>
+          <p>Result:{{result}}</p>
+        </div>
+      </div>
+    </form>
+    </body>
+</html>
