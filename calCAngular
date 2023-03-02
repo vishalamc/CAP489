@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>My Angular App</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+    <script>
+        var app=angular.module("calc",[])
+        app.controller("calccontroller",function($scope){
+            $scope.btnsubmit=function(){
+                $scope.result=0
+                var a=Number($scope.txtnum1)
+                var b=Number($scope.txtnum2)
+                $scope.result=a+b
+            }
+        })
+    </script>
+     <style>
+         body{
+             background-color:green;
+             color:white;
+         }
+     </style>  
+    </head>
+    <body ng-app="calc" ng-controller="calccontroller">
+  <form name="form1">
+  <table height="50%" width="50%" align="center" border="1">
+      <tr><td>Calculation</td></tr>
+      <tr><td><input type="text"  ng-model="txtnum1">
+     
+      </td></tr>
+ 
+  
+  <tr><td><input type="text"  ng-model="txtnum2" required></td></tr>
+  <tr><td><button ng-click="btnsubmit()">SUBMIT</button></td></tr>
+  <tr><td>Result:{{result}}</td></tr>
+  </table></form>
+    </body>
+</html
+
